@@ -1,0 +1,89 @@
+import Link from 'next/link';
+
+const caseStudies = [
+  {
+    title: 'Lucho',
+    industry: 'Consumer Products',
+    description: 'Full-stack engineering for a growing brand\'s digital platform',
+    image: '/placeholder-lucho.jpg',
+    href: '/case-studies/lucho',
+  },
+  {
+    title: 'Data Modernization Project',
+    industry: 'TBD',
+    description: 'Unified data from multiple sources into a single source of truth',
+    image: '/placeholder-data.jpg',
+    href: '#',
+  },
+  {
+    title: 'AI Workflow Automation',
+    industry: 'TBD',
+    description: 'Built an AI-powered workflow that cut manual review time by 60%',
+    image: '/placeholder-ai.jpg',
+    href: '#',
+  },
+];
+
+export default function CaseStudies() {
+  return (
+    <section id="case-studies" className="py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="font-heading text-4xl sm:text-5xl font-bold text-brand-primary mb-4">
+            Our Work
+          </h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            A few examples of how we've helped businesses like yours.
+          </p>
+        </div>
+
+        {/* Case Studies Grid */}
+        <div className="grid md:grid-cols-3 gap-8">
+          {caseStudies.map((study) => (
+            <Link
+              key={study.title}
+              href={study.href}
+              className="group block rounded-xl overflow-hidden bg-gray-50 hover:shadow-xl transition-all duration-300"
+            >
+              {/* Image placeholder */}
+              <div className="aspect-video bg-gradient-to-br from-brand-secondary to-brand-primary relative overflow-hidden">
+                <div className="absolute inset-0 flex items-center justify-center text-white/50 text-sm">
+                  Image Placeholder
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="p-6">
+                <div className="text-sm font-semibold text-brand-accent mb-2">
+                  {study.industry}
+                </div>
+                <h3 className="font-heading text-xl font-bold text-brand-primary mb-3 group-hover:text-brand-secondary transition-colors">
+                  {study.title}
+                </h3>
+                <p className="text-gray-700">{study.description}</p>
+
+                <div className="mt-4 inline-flex items-center text-brand-secondary font-semibold group-hover:text-brand-accent transition-colors">
+                  Read case study
+                  <svg
+                    className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
