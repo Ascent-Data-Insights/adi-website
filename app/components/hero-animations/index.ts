@@ -8,3 +8,10 @@ export { default as RisingOrbs } from './RisingOrbs';
 export { default as DataStream } from './DataStream';
 export { default as Constellation } from './Constellation';
 export { default as ParallaxLayers } from './ParallaxLayers';
+
+// MOUNTAIN-THEMED ANIMATIONS (matches logo)
+export { default as MountainSilhouette } from './MountainSilhouette';
+export { default as ClimbingParticles } from './ClimbingParticles';
+export { default as MountainPeaks } from './MountainPeaks';
+export { default as AuroraMountains } from './AuroraMountains';
+export { default as AscentTrail } from './AscentTrail';

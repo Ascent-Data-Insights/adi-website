@@ -18,12 +18,77 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link
-              href="/services/data-modernization"
-              className="text-gray-700 hover:text-brand-secondary font-medium transition-colors"
-            >
-              Services
-            </Link>
+            {/* Services Dropdown */}
+            <div className="relative group">
+              <button className="text-gray-700 hover:text-brand-secondary font-medium transition-colors flex items-center space-x-1">
+                <span>Services</span>
+                <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2">
+                <Link
+                  href="/services/data-modernization"
+                  className="block px-4 py-3 text-gray-700 hover:bg-brand-secondary/10 hover:text-brand-secondary transition-colors"
+                >
+                  <div className="font-semibold">Data Modernization</div>
+                  <div className="text-sm text-gray-500">Turn data into an advantage</div>
+                </Link>
+                <Link
+                  href="/services/ai-strategy"
+                  className="block px-4 py-3 text-gray-700 hover:bg-brand-secondary/10 hover:text-brand-secondary transition-colors"
+                >
+                  <div className="font-semibold">AI Strategy & Implementation</div>
+                  <div className="text-sm text-gray-500">Cut through the hype</div>
+                </Link>
+                <Link
+                  href="/services/innovation-engineering"
+                  className="block px-4 py-3 text-gray-700 hover:bg-brand-secondary/10 hover:text-brand-secondary transition-colors"
+                >
+                  <div className="font-semibold">Innovation Engineering</div>
+                  <div className="text-sm text-gray-500">Your idea. Built and shipped.</div>
+                </Link>
+              </div>
+            </div>
+            {/* Industries Dropdown */}
+            <div className="relative group">
+              <button className="text-gray-700 hover:text-brand-secondary font-medium transition-colors flex items-center space-x-1">
+                <span>Industries</span>
+                <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2">
+                <Link
+                  href="/industries/manufacturing"
+                  className="block px-4 py-3 text-gray-700 hover:bg-brand-secondary/10 hover:text-brand-secondary transition-colors"
+                >
+                  <div className="font-semibold">Manufacturing</div>
+                  <div className="text-sm text-gray-500">Optimize production & maintenance</div>
+                </Link>
+                <Link
+                  href="/industries/logistics"
+                  className="block px-4 py-3 text-gray-700 hover:bg-brand-secondary/10 hover:text-brand-secondary transition-colors"
+                >
+                  <div className="font-semibold">Logistics</div>
+                  <div className="text-sm text-gray-500">Streamline supply chains</div>
+                </Link>
+                <Link
+                  href="/industries/consumer-goods"
+                  className="block px-4 py-3 text-gray-700 hover:bg-brand-secondary/10 hover:text-brand-secondary transition-colors"
+                >
+                  <div className="font-semibold">Consumer Goods</div>
+                  <div className="text-sm text-gray-500">Understand customer behavior</div>
+                </Link>
+                <Link
+                  href="/industries/startups"
+                  className="block px-4 py-3 text-gray-700 hover:bg-brand-secondary/10 hover:text-brand-secondary transition-colors"
+                >
+                  <div className="font-semibold">Startups</div>
+                  <div className="text-sm text-gray-500">Build & ship fast</div>
+                </Link>
+              </div>
+            </div>
             <Link
               href="/about"
               className="text-gray-700 hover:text-brand-secondary font-medium transition-colors"
@@ -35,6 +100,12 @@ export default function Header() {
               className="text-gray-700 hover:text-brand-secondary font-medium transition-colors"
             >
               Our Work
+            </Link>
+            <Link
+              href="/blog"
+              className="text-gray-700 hover:text-brand-secondary font-medium transition-colors"
+            >
+              Blog
             </Link>
             <Link
               href="/contact"
@@ -62,30 +133,89 @@ export default function Header() {
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <div className="md:hidden py-4 space-y-4 border-t border-gray-200">
-            <Link
-              href="/services/data-modernization"
-              className="block text-gray-700 hover:text-brand-secondary font-medium"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Services
-            </Link>
+            <div>
+              <div className="font-medium text-gray-900 px-2 mb-2">Services</div>
+              <div className="pl-4 space-y-2">
+                <Link
+                  href="/services/data-modernization"
+                  className="block text-gray-700 hover:text-brand-secondary"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Data Modernization
+                </Link>
+                <Link
+                  href="/services/ai-strategy"
+                  className="block text-gray-700 hover:text-brand-secondary"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  AI Strategy & Implementation
+                </Link>
+                <Link
+                  href="/services/innovation-engineering"
+                  className="block text-gray-700 hover:text-brand-secondary"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Innovation Engineering
+                </Link>
+              </div>
+            </div>
+            <div>
+              <div className="font-medium text-gray-900 px-2 mb-2">Industries</div>
+              <div className="pl-4 space-y-2">
+                <Link
+                  href="/industries/manufacturing"
+                  className="block text-gray-700 hover:text-brand-secondary"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Manufacturing
+                </Link>
+                <Link
+                  href="/industries/logistics"
+                  className="block text-gray-700 hover:text-brand-secondary"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Logistics
+                </Link>
+                <Link
+                  href="/industries/consumer-goods"
+                  className="block text-gray-700 hover:text-brand-secondary"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Consumer Goods
+                </Link>
+                <Link
+                  href="/industries/startups"
+                  className="block text-gray-700 hover:text-brand-secondary"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Startups
+                </Link>
+              </div>
+            </div>
             <Link
               href="/about"
-              className="block text-gray-700 hover:text-brand-secondary font-medium"
+              className="block text-gray-700 hover:text-brand-secondary font-medium px-2"
               onClick={() => setMobileMenuOpen(false)}
             >
               About
             </Link>
             <Link
               href="#case-studies"
-              className="block text-gray-700 hover:text-brand-secondary font-medium"
+              className="block text-gray-700 hover:text-brand-secondary font-medium px-2"
               onClick={() => setMobileMenuOpen(false)}
             >
               Our Work
             </Link>
             <Link
+              href="/blog"
+              className="block text-gray-700 hover:text-brand-secondary font-medium px-2"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Blog
+            </Link>
+            <Link
               href="/contact"
-              className="block px-6 py-2.5 text-white bg-brand-accent hover:bg-brand-accent/90 rounded-lg font-semibold text-center"
+              className="block px-6 py-2.5 text-white bg-brand-accent hover:bg-brand-accent/90 rounded-lg font-semibold text-center mx-2"
               onClick={() => setMobileMenuOpen(false)}
             >
               Contact

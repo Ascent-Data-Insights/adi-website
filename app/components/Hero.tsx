@@ -2,21 +2,7 @@
 
 import Link from 'next/link';
 
-// Hero Animation Options - uncomment ONE of these to use:
-
-// ORIGINAL OPTIONS:
-import { AnimatedGradient } from './hero-animations';        // Subtle gradient shift
-import { FloatingParticles } from './hero-animations';          // Floating particles with connected network (CURRENT)
-// import { GeometricLines } from './hero-animations';          // Diagonal lines with pulse accents
-// import { WavePattern } from './hero-animations';             // Layered animated waves
-// import { DotGrid } from './hero-animations';                 // Dot grid with floating accents
-
-// NEW OPTIONS:
-import { MorphingBlobs } from './hero-animations';           // Soft morphing blob shapes
-import { RisingOrbs } from './hero-animations';              // Bubbles rising from bottom
-import { DataStream } from './hero-animations';              // Matrix-style data stream
-import { Constellation } from './hero-animations';           // Pulsing stars with constellation lines
-import { ParallaxLayers } from './hero-animations';          // Layered parallax movement
+import { FloatingParticles } from './hero-animations';
 
 // Set which animation to use:
 const HeroAnimation = FloatingParticles;

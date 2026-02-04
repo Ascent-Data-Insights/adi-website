@@ -11,10 +11,13 @@
   "dependencies": {
     "@headlessui/react": "^2.2.0",
     "clsx": "^2.1.1",
+    "gray-matter": "^4.0.3",
     "motion": "^12.29.0",
     "next": "^15.1.4",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
     "@netlify/plugin-nextjs": "^5.15.5",

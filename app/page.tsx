@@ -1,6 +1,7 @@
 import Header from './components/Header';
 import Hero from './components/Hero';
 import ThreePillars from './components/ThreePillars';
+import Industries from './components/Industries';
 import WhyWorkWithUs from './components/WhyWorkWithUs';
 import Testimonials from './components/Testimonials';
 import CaseStudies from './components/CaseStudies';
@@ -14,6 +15,7 @@ export default function Home() {
       <Header />
       <Hero />
       <ThreePillars />
+      <Industries />
       <WhyWorkWithUs />
       <Testimonials />
       <CaseStudies />
