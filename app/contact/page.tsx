@@ -18,8 +18,8 @@ export default function ContactPage() {
     const formData = new FormData(form);
 
     try {
-      // Submit directly to Netlify
-      const response = await fetch('/', {
+      // Submit to Netlify Forms endpoint for Next.js apps
+      const response = await fetch('/__forms.html', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(formData as any).toString(),
