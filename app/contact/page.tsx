@@ -1,5 +1,6 @@
 import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';
+import Script from 'next/script';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -9,10 +10,15 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
+    <>
+      <Script
+        src="https://assets.calendly.com/assets/external/widget.js"
+        strategy="lazyOnload"
+      />
+      <div className="min-h-screen flex flex-col">
+        <Header />
 
-      <main className="flex-grow">
+        <main className="flex-grow">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-brand-primary to-brand-secondary py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -40,29 +46,11 @@ export default function ContactPage() {
                 </p>
 
                 {/* Calendly Embed */}
-                <div className="bg-gray-50 rounded-xl p-8 min-h-[600px] flex items-center justify-center">
-                  <div className="text-center">
-                    <svg
-                      className="w-16 h-16 text-brand-secondary mx-auto mb-4"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                      />
-                    </svg>
-                    <p className="text-gray-600">
-                      Calendly integration will be added here
-                    </p>
-                    <p className="text-sm text-gray-500 mt-2">
-                      (Requires Calendly embed code)
-                    </p>
-                  </div>
-                </div>
+                <div
+                  className="calendly-inline-widget"
+                  data-url="https://calendly.com/parker-ascentdi/30min"
+                  style={{ minWidth: '320px', height: '700px' }}
+                />
               </div>
 
               {/* Right Column - Contact Form */}
@@ -205,9 +193,10 @@ export default function ContactPage() {
             </div>
           </div>
         </section>
-      </main>
+        </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 }
