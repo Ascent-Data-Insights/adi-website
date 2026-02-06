@@ -17,17 +17,12 @@ export default function ContactPage() {
     const form = e.currentTarget;
     const formData = new FormData(form);
 
-    const data = {
-      name: formData.get('name') as string,
-      email: formData.get('email') as string,
-      message: formData.get('message') as string,
-    };
-
     try {
-      const response = await fetch('/api/contact', {
+      // Submit directly to Netlify
+      const response = await fetch('/', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString(),
       });
 
       if (response.ok) {
@@ -132,9 +127,11 @@ export default function ContactPage() {
                   </div>
                 ) : (
                   <form
+                    name="contact"
                     onSubmit={handleSubmit}
                     className="space-y-6"
                   >
+                    <input type="hidden" name="form-name" value="contact" />
 
                     <div>
                       <label
