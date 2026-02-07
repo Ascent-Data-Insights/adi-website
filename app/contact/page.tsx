@@ -33,7 +33,7 @@ export default function ContactPage() {
       }
     } catch (error) {
       setFormState('error');
-      setErrorMessage('Something went wrong. Please try emailing us directly at hello@ascentdatainsights.com');
+      setErrorMessage('Something went wrong. Please try emailing us directly at info@ascentdi.com');
     }
   };
 
@@ -48,14 +48,13 @@ export default function ContactPage() {
 
         <main className="flex-grow">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-brand-primary to-brand-secondary py-20">
+        <section className="bg-gradient-to-br from-brand-primary to-brand-secondary pt-32 pb-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="font-heading text-5xl sm:text-6xl font-bold text-white mb-6">
-              Let's Figure It Out Together
+              Connect with Us!
             </h1>
             <p className="text-xl text-white/90 leading-relaxed">
-              Tell us what you're working on. We'll have an honest conversation about whether we
-              can help—and if we're not the right fit, we'll tell you that too.
+              Let's build something great together.
             </p>
           </div>
         </section>
@@ -201,70 +200,17 @@ export default function ContactPage() {
         </section>
 
         {/* Additional Contact Info */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-12 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="font-heading text-3xl font-bold text-brand-primary mb-8">
-              Other Ways to Reach Us
-            </h2>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white rounded-xl p-8 shadow-sm">
-                <div className="w-12 h-12 rounded-full bg-brand-accent/20 mx-auto mb-4 flex items-center justify-center">
-                  <svg
-                    className="w-6 h-6 text-brand-accent"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    />
-                  </svg>
-                </div>
-                <h3 className="font-heading text-xl font-bold text-brand-primary mb-2">
-                  Email
-                </h3>
-                <a
-                  href="mailto:hello@ascentdatainsights.com"
-                  className="text-brand-secondary hover:text-brand-accent transition-colors"
-                >
-                  hello@ascentdatainsights.com
-                </a>
-              </div>
-
-              <div className="bg-white rounded-xl p-8 shadow-sm">
-                <div className="w-12 h-12 rounded-full bg-brand-accent/20 mx-auto mb-4 flex items-center justify-center">
-                  <svg
-                    className="w-6 h-6 text-brand-accent"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                  </svg>
-                </div>
-                <h3 className="font-heading text-xl font-bold text-brand-primary mb-2">
-                  Location
-                </h3>
-                <p className="text-gray-700">
-                  Cincinnati, OH
-                </p>
-              </div>
-            </div>
+            <p className="text-xl text-gray-700">
+              Or, email us at{' '}
+              <a
+                href="mailto:info@ascentdi.com"
+                className="text-brand-secondary hover:text-brand-accent font-semibold transition-colors"
+              >
+                info@ascentdi.com
+              </a>
+            </p>
           </div>
         </section>
         </main>

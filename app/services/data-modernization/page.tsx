@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';
+import TypesOfWorkCarousel from './TypesOfWorkCarousel';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -43,9 +44,9 @@ export default function DataModernizationPage() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="relative flex flex-col md:flex-row md:items-start gap-8 md:gap-4">
               {/* Step 1 */}
-              <div className="relative">
+              <div className="flex-1">
                 <div className="flex items-center justify-center w-16 h-16 rounded-full bg-brand-accent text-white font-heading text-2xl font-bold mb-6 mx-auto">
                   1
                 </div>
@@ -58,8 +59,25 @@ export default function DataModernizationPage() {
                 </p>
               </div>
 
+              {/* Arrow 1 */}
+              <div className="hidden md:flex items-center justify-center flex-shrink-0 pt-8">
+                <svg
+                  className="w-12 h-12 text-brand-secondary"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  />
+                </svg>
+              </div>
+
               {/* Step 2 */}
-              <div className="relative">
+              <div className="flex-1">
                 <div className="flex items-center justify-center w-16 h-16 rounded-full bg-brand-accent text-white font-heading text-2xl font-bold mb-6 mx-auto">
                   2
                 </div>
@@ -72,8 +90,25 @@ export default function DataModernizationPage() {
                 </p>
               </div>
 
+              {/* Arrow 2 */}
+              <div className="hidden md:flex items-center justify-center flex-shrink-0 pt-8">
+                <svg
+                  className="w-12 h-12 text-brand-secondary"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  />
+                </svg>
+              </div>
+
               {/* Step 3 */}
-              <div className="relative">
+              <div className="flex-1">
                 <div className="flex items-center justify-center w-16 h-16 rounded-full bg-brand-accent text-white font-heading text-2xl font-bold mb-6 mx-auto">
                   3
                 </div>
@@ -84,6 +119,94 @@ export default function DataModernizationPage() {
                   Know what to do next. We build forecasting models, optimization tools, and
                   decision-support systems that turn insight into action.
                 </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Types of Work */}
+        <TypesOfWorkCarousel />
+
+        {/* Case Study Highlight */}
+        <section className="py-20 bg-white">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="font-heading text-4xl font-bold text-brand-primary mb-12 text-center">
+              See It in Action
+            </h2>
+
+            <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8 md:p-12 shadow-lg border border-gray-200">
+              <div className="flex flex-col md:flex-row md:items-start gap-8">
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 rounded-full bg-brand-accent flex items-center justify-center">
+                    <svg
+                      className="w-8 h-8 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+
+                <div className="flex-grow">
+                  <h3 className="font-heading text-2xl font-bold text-brand-primary mb-2">
+                    Unified Data Platform for Growing Business
+                  </h3>
+                  <p className="text-gray-600 mb-6 italic">Manufacturing & Distribution</p>
+
+                  <div className="space-y-4 mb-6">
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">The Problem:</h4>
+                      <p className="text-gray-700">
+                        Data lived in disconnected spreadsheets and legacy systems, making reporting
+                        slow and unreliable. Leadership couldn't get accurate answers without days of
+                        manual work.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">What We Did:</h4>
+                      <p className="text-gray-700">
+                        Built a modern cloud data platform with automated pipelines and self-serve
+                        dashboards. Integrated multiple data sources into a single source of truth.
+                      </p>
+                    </div>
+
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-2">The Result:</h4>
+                      <p className="text-gray-700">
+                        Reporting time cut from days to minutes. Leadership now has real-time access to
+                        accurate business metrics, enabling faster, data-driven decisions.
+                      </p>
+                    </div>
+                  </div>
+
+                  <Link
+                    href="/case-studies"
+                    className="inline-flex items-center text-brand-secondary hover:text-brand-accent font-semibold transition-colors group"
+                  >
+                    Read the full case study
+                    <svg
+                      className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -172,20 +295,6 @@ export default function DataModernizationPage() {
                 </li>
               </ul>
             </div>
-          </div>
-        </section>
-
-        {/* Our Approach */}
-        <section className="py-20 bg-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="font-heading text-4xl font-bold text-brand-primary mb-6">
-              Our Approach
-            </h2>
-            <p className="text-xl text-gray-700 leading-relaxed">
-              We don't just build infrastructure and hand over the keys. We make sure your data
-              platform is intuitive, documented, and understood by your team. When we're done,
-              you'll have a foundation that lasts—and the knowledge to maintain it.
-            </p>
           </div>
         </section>
 
