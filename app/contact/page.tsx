@@ -46,13 +46,6 @@ export default function ContactPage() {
       <div className="min-h-screen flex flex-col">
         <Header />
 
-        {/* Hidden form for Netlify Forms detection */}
-        <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
-          <input type="text" name="name" />
-          <input type="email" name="email" />
-          <textarea name="message"></textarea>
-        </form>
-
         <main className="flex-grow">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-brand-primary to-brand-secondary py-20">
