@@ -1,6 +1,7 @@
 import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Metadata } from 'next';
 import { getBlogPost, getAllBlogSlugs } from '@/lib/blog';
 import { notFound } from 'next/navigation';
@@ -95,11 +96,26 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
       {/* Blog Content */}
       <article className="py-12 bg-white">
+        {/* Hero Image */}
+        {post.heroImage && (
+          <div className="max-w-sm mx-auto mb-4 px-4 sm:px-6 lg:px-8 -mt-6">
+            <div className="relative rounded-xl overflow-hidden shadow-lg">
+              <Image
+                src={post.heroImage}
+                alt={post.title}
+                width={1000}
+                height={1000}
+                className="w-full h-auto"
+                priority
+              />
+            </div>
+          </div>
+        )}
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg prose-brand max-w-none">
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
-              rehypePlugins={[rehypeRaw]} // Add this line
+              rehypePlugins={[rehypeRaw]}
               components={{
                 h1: ({ children }: { children?: React.ReactNode }) => (
                   <h1 className="font-heading text-4xl font-bold text-brand-primary mb-6 mt-8">

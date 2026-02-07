@@ -1,6 +1,7 @@
 import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Metadata } from 'next';
 import { getAllBlogPosts } from '@/lib/blog';
 
@@ -43,57 +44,73 @@ export default function BlogPage() {
             <div className="space-y-12">
               {posts.map((post) => (
                 <article key={post.slug} className="border-b border-gray-200 pb-12 last:border-b-0">
-                  <Link href={`/blog/${post.slug}`} className="group">
-                    <h2 className="font-heading text-3xl font-bold text-brand-primary mb-3 group-hover:text-brand-secondary transition-colors">
-                      {post.title}
-                    </h2>
-                  </Link>
-                  <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
-                    <time dateTime={post.date}>
-                      {new Date(post.date).toLocaleDateString('en-US', {
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric',
-                      })}
-                    </time>
-                    {post.author && (
-                      <>
-                        <span>•</span>
-                        <span>{post.author}</span>
-                      </>
+                  <div className="flex gap-6">
+                    {post.heroImage && (
+                      <Link href={`/blog/${post.slug}`} className="flex-shrink-0">
+                        <div className="relative w-48 h-32 rounded-lg overflow-hidden">
+                          <Image
+                            src={post.heroImage}
+                            alt={post.title}
+                            fill
+                            className="object-cover hover:scale-105 transition-transform duration-300"
+                          />
+                        </div>
+                      </Link>
                     )}
-                  </div>
-                  {post.excerpt && (
-                    <p className="text-gray-600 mb-4 text-lg leading-relaxed">
-                      {post.excerpt}
-                    </p>
-                  )}
-                  {post.tags && post.tags.length > 0 && (
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {post.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="px-3 py-1 bg-brand-secondary/10 text-brand-secondary rounded-full text-sm font-medium"
+                    <div className="flex-grow">
+                      <Link href={`/blog/${post.slug}`} className="group">
+                        <h2 className="font-heading text-3xl font-bold text-brand-primary mb-3 group-hover:text-brand-secondary transition-colors">
+                          {post.title}
+                        </h2>
+                      </Link>
+                      <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                        <time dateTime={post.date}>
+                          {new Date(post.date).toLocaleDateString('en-US', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric',
+                          })}
+                        </time>
+                        {post.author && (
+                          <>
+                            <span>•</span>
+                            <span>{post.author}</span>
+                          </>
+                        )}
+                      </div>
+                      {post.excerpt && (
+                        <p className="text-gray-600 mb-4 text-lg leading-relaxed">
+                          {post.excerpt}
+                        </p>
+                      )}
+                      {post.tags && post.tags.length > 0 && (
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          {post.tags.map((tag) => (
+                            <span
+                              key={tag}
+                              className="px-3 py-1 bg-brand-secondary/10 text-brand-secondary rounded-full text-sm font-medium"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                      <Link
+                        href={`/blog/${post.slug}`}
+                        className="text-brand-secondary hover:text-brand-accent font-medium inline-flex items-center group"
+                      >
+                        Read more
+                        <svg
+                          className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
                         >
-                          {tag}
-                        </span>
-                      ))}
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </Link>
                     </div>
-                  )}
-                  <Link
-                    href={`/blog/${post.slug}`}
-                    className="text-brand-secondary hover:text-brand-accent font-medium inline-flex items-center group"
-                  >
-                    Read more
-                    <svg
-                      className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
+                  </div>
                 </article>
               ))}
             </div>

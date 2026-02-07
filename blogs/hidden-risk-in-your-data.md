@@ -4,6 +4,7 @@ date: "2025-07-05"
 excerpt: "It's what you don't know that can hurt you. It is entirely possible to get by with a blind spot as long as you know it is there."
 author: "Aaron Robeson"
 tags: ["Clean Data", "Data Mistakes", "Data Opportunities"]
+heroImage: "/images/blog/hidden_data_risks_final-1.png"
 ---
 
 It's what you don't know that can hurt you. It is entirely possible to get by with a blind spot as long as you know it is there. That's why we glance over our shoulders when we change lanes. The true risks (and by the same token opportunities) are the gaps that we are unaware we have, the “unknown unknowns”. They are the missing insights or sudden bottlenecks that can catch you entirely unprepared.

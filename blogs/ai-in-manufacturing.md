@@ -4,6 +4,7 @@ date: "2025-10-15"
 excerpt: "It is ironic that as people are struggling with attention one of the most powerful features of AI is its ability to be attentive."
 author: "Aaron Robeson"
 tags: ["AI", "Data Mistakes", "Manufacturing"]
+heroImage: "/images/blog/the_final_5_trap-1.png"
 ---
 
 It is ironic that as people are struggling with attention<sup>[1,2]</sup> one of the most powerful features of AI is its ability to be attentive. Given a specific task, these systems will focus on it with the intensity of a grandmaster in the middle of a chess match — no coffee breaks, no doomscrolling. In fact, the now-famous research paper that kicked off much of this AI boom was even titled [Attention Is All You Need](https://arxiv.org/abs/1706.03762).<sup>[3]</sup> 
