@@ -4,6 +4,37 @@ import { useState } from 'react';
 
 const workTypes = [
   {
+    title: 'Process Automation',
+    description:
+      'Replace manual data entry and repetitive tasks with intelligent automation. Free your team to focus on high-value work instead of spreadsheet wrangling.',
+    icon: (
+      <svg className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+        />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Business Intelligence & Dashboards',
+    description:
+      'Turn raw data into visual insights your team can actually use. Interactive dashboards that make complex metrics simple and accessible.',
+    icon: (
+      <svg className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+        />
+      </svg>
+    ),
+  },
+  {
     title: 'Data Warehousing',
     description:
       'Build centralized data repositories that consolidate information from across your organization. Modern cloud-based warehouses that scale with your business.',
@@ -30,37 +61,6 @@ const workTypes = [
           strokeWidth={2}
           d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"
         />
-      </svg>
-    ),
-  },
-  {
-    title: 'Business Intelligence & Dashboards',
-    description:
-      'Turn raw data into visual insights your team can actually use. Interactive dashboards that make complex metrics simple and accessible.',
-    icon: (
-      <svg className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-        />
-      </svg>
-    ),
-  },
-  {
-    title: 'Process Automation',
-    description:
-      'Replace manual data entry and repetitive tasks with intelligent automation. Free your team to focus on high-value work instead of spreadsheet wrangling.',
-    icon: (
-      <svg className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-        />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
       </svg>
     ),
   },
@@ -113,29 +113,29 @@ const workTypes = [
 
 export default function TypesOfWorkCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const cardsPerView = 3;
+  const maxIndex = workTypes.length - cardsPerView;
 
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % workTypes.length);
+    setCurrentIndex((prev) => {
+      if (prev >= maxIndex) return 0;
+      return prev + 1;
+    });
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + workTypes.length) % workTypes.length);
+    setCurrentIndex((prev) => {
+      if (prev <= 0) return maxIndex;
+      return prev - 1;
+    });
   };
 
   const goToSlide = (index: number) => {
-    setCurrentIndex(index);
+    setCurrentIndex(Math.min(index, maxIndex));
   };
 
-  // Create an extended array for seamless looping
-  // Show current card + 2 more, so we need to handle wrapping
-  const getExtendedCards = () => {
-    // Create triple array for smooth infinite scroll
-    return [...workTypes, ...workTypes, ...workTypes];
-  };
-
-  const extendedCards = getExtendedCards();
-  // Start at the middle set of cards
-  const offset = workTypes.length + currentIndex;
+  // Create extended array for smooth sliding (double the array for seamless wrapping)
+  const extendedCards = [...workTypes, ...workTypes.slice(0, cardsPerView - 1)];
 
   return (
     <section className="py-20 bg-gray-50">
@@ -156,7 +156,7 @@ export default function TypesOfWorkCarousel() {
             <div
               className="flex transition-transform duration-500 ease-out"
               style={{
-                transform: `translateX(-${offset * (100 / 3)}%)`,
+                transform: `translateX(-${currentIndex * (100 / 3)}%)`,
               }}
             >
               {extendedCards.map((card, index) => (
@@ -212,7 +212,7 @@ export default function TypesOfWorkCarousel() {
 
         {/* Dots Navigation */}
         <div className="flex justify-center gap-2 mt-8">
-          {workTypes.map((_, index) => (
+          {Array.from({ length: maxIndex + 1 }).map((_, index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
