@@ -10,10 +10,10 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
-            <Image src="/logo.png" alt="Ascent Data Insights" width={180} height={60} className="h-12 w-auto" />
+            <Image src="/logo.png" alt="Ascent Data Insights" width={180} height={60} className="h-18 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
