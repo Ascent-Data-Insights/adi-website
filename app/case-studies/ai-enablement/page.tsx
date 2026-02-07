@@ -17,21 +17,6 @@ export default function AIEnablementCaseStudyPage() {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-brand-primary to-brand-secondary pt-32 pb-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <Link
-              href="/case-studies"
-              className="inline-flex items-center text-white/80 hover:text-white mb-8 transition-colors"
-            >
-              <svg
-                className="w-5 h-5 mr-2"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-              Back to Case Studies
-            </Link>
-
             <div className="mb-6">
               <span className="inline-block px-4 py-2 text-sm font-semibold text-brand-primary bg-brand-accent rounded-full">
                 AI Strategy & Implementation
