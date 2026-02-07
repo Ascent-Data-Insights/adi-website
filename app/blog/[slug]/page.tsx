@@ -6,6 +6,7 @@ import { getBlogPost, getAllBlogSlugs } from '@/lib/blog';
 import { notFound } from 'next/navigation';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
 
 export async function generateStaticParams() {
   const slugs = getAllBlogSlugs();
@@ -98,6 +99,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <div className="prose prose-lg prose-brand max-w-none">
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
+              rehypePlugins={[rehypeRaw]} // Add this line
               components={{
                 h1: ({ children }: { children?: React.ReactNode }) => (
                   <h1 className="font-heading text-4xl font-bold text-brand-primary mb-6 mt-8">
@@ -115,9 +117,15 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   </h3>
                 ),
                 p: ({ children }: { children?: React.ReactNode }) => (
-                  <p className="text-gray-700 leading-relaxed mb-4">
+                  <p className="text-gray-700 leading-relaxed mb-6 text-xl">
                     {children}
                   </p>
+                ),
+                // Custom handler for the underline tag
+                u: ({ children }: { children?: React.ReactNode }) => (
+                  <u className="decoration-brand-secondary">
+                    {children}
+                  </u>
                 ),
                 a: ({ href, children }: { href?: string; children?: React.ReactNode }) => (
                   <a
@@ -130,12 +138,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   </a>
                 ),
                 ul: ({ children }: { children?: React.ReactNode }) => (
-                  <ul className="list-disc list-inside mb-4 space-y-2 text-gray-700">
+                  <ul className="list-disc list-outside mb-4 mt-4 ml-6 space-y-2 text-gray-700 text-xl">
                     {children}
                   </ul>
                 ),
                 ol: ({ children }: { children?: React.ReactNode }) => (
-                  <ol className="list-decimal list-inside mb-4 space-y-2 text-gray-700">
+                  <ol className="list-decimal list-outside mb-4 mt-4 ml-6 space-y-2 text-gray-700 text-xl">
                     {children}
                   </ol>
                 ),
@@ -160,6 +168,28 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-6">
                     {children}
                   </pre>
+                ),
+                table: ({ children }: { children?: React.ReactNode }) => (
+                  <div className="my-6 w-full overflow-hidden rounded-lg border border-gray-200">
+                    <table className="min-w-full divide-y divide-gray-200">
+                      {children}
+                    </table>
+                  </div>
+                ),
+                thead: ({ children }: { children?: React.ReactNode }) => (
+                  <thead className="bg-gray-50">
+                    {children}
+                  </thead>
+                ),
+                th: ({ children }: { children?: React.ReactNode }) => (
+                  <th className="px-4 py-3 text-left font-semibold text-gray-900 border-r border-gray-200 last:border-r-0">
+                    {children}
+                  </th>
+                ),
+                td: ({ children }: { children?: React.ReactNode }) => (
+                  <td className="px-4 py-3 text-gray-700 border-r border-gray-200 last:border-r-0 border-t border-gray-200">
+                    {children}
+                  </td>
                 ),
               }}
             >
