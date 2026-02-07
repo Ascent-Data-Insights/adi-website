@@ -188,7 +188,7 @@ export default function DataModernizationPage() {
                   </div>
 
                   <Link
-                    href="/case-studies"
+                    href="/case-studies/routing-optimization"
                     className="inline-flex items-center text-brand-secondary hover:text-brand-accent font-semibold transition-colors group"
                   >
                     Read the full case study
