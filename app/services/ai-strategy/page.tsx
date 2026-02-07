@@ -117,7 +117,7 @@ export default function AIStrategyPage() {
                   </div>
 
                   <Link
-                    href="/case-studies"
+                    href="/case-studies/ai-enablement"
                     className="inline-flex items-center text-brand-secondary hover:text-brand-accent font-semibold transition-colors group"
                   >
                     Read the full case study

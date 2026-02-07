@@ -149,7 +149,7 @@ export default function InnovationEngineeringPage() {
                   </div>
 
                   <Link
-                    href="/case-studies"
+                    href="/case-studies/innovation-engineering-lucho"
                     className="inline-flex items-center text-brand-secondary hover:text-brand-accent font-semibold transition-colors group"
                   >
                     Read the full case study

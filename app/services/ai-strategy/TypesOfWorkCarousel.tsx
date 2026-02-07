@@ -112,25 +112,29 @@ const workTypes = [
 
 export default function TypesOfWorkCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const cardsPerView = 3;
+  const maxIndex = workTypes.length - cardsPerView;
 
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % workTypes.length);
+    setCurrentIndex((prev) => {
+      if (prev >= maxIndex) return 0;
+      return prev + 1;
+    });
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + workTypes.length) % workTypes.length);
+    setCurrentIndex((prev) => {
+      if (prev <= 0) return maxIndex;
+      return prev - 1;
+    });
   };
 
   const goToSlide = (index: number) => {
-    setCurrentIndex(index);
+    setCurrentIndex(Math.min(index, maxIndex));
   };
 
-  const getExtendedCards = () => {
-    return [...workTypes, ...workTypes, ...workTypes];
-  };
-
-  const extendedCards = getExtendedCards();
-  const offset = workTypes.length + currentIndex;
+  // Create extended array for smooth sliding (double the array for seamless wrapping)
+  const extendedCards = [...workTypes, ...workTypes.slice(0, cardsPerView - 1)];
 
   return (
     <section className="py-20 bg-gray-50">
@@ -149,7 +153,7 @@ export default function TypesOfWorkCarousel() {
             <div
               className="flex transition-transform duration-500 ease-out"
               style={{
-                transform: `translateX(-${offset * (100 / 3)}%)`,
+                transform: `translateX(-${currentIndex * (100 / 3)}%)`,
               }}
             >
               {extendedCards.map((card, index) => (
@@ -203,7 +207,7 @@ export default function TypesOfWorkCarousel() {
         </div>
 
         <div className="flex justify-center gap-2 mt-8">
-          {workTypes.map((_, index) => (
+          {Array.from({ length: maxIndex + 1 }).map((_, index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}

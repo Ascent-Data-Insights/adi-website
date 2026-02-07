@@ -95,12 +95,38 @@ export default function Header() {
             >
               About
             </Link>
-            <Link
-              href="#case-studies"
-              className="text-gray-700 hover:text-brand-secondary font-medium transition-colors"
-            >
-              Our Work
-            </Link>
+            {/* Our Work Dropdown */}
+            <div className="relative group">
+              <button className="text-gray-700 hover:text-brand-secondary font-medium transition-colors flex items-center space-x-1">
+                <span>Our Work</span>
+                <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2">
+                <Link
+                  href="/case-studies/innovation-engineering-lucho"
+                  className="block px-4 py-3 text-gray-700 hover:bg-brand-secondary/10 hover:text-brand-secondary transition-colors"
+                >
+                  <div className="font-semibold">Innovation Engineering with Lucho</div>
+                  <div className="text-sm text-gray-500">Consumer Products</div>
+                </Link>
+                <Link
+                  href="/case-studies/ai-enablement"
+                  className="block px-4 py-3 text-gray-700 hover:bg-brand-secondary/10 hover:text-brand-secondary transition-colors"
+                >
+                  <div className="font-semibold">AI-Powered Review Automation</div>
+                  <div className="text-sm text-gray-500">Professional Services</div>
+                </Link>
+                <Link
+                  href="/case-studies/routing-optimization"
+                  className="block px-4 py-3 text-gray-700 hover:bg-brand-secondary/10 hover:text-brand-secondary transition-colors"
+                >
+                  <div className="font-semibold">Routing Optimization</div>
+                  <div className="text-sm text-gray-500">Manufacturing & Distribution</div>
+                </Link>
+              </div>
+            </div>
             <Link
               href="/blog"
               className="text-gray-700 hover:text-brand-secondary font-medium transition-colors"
@@ -199,13 +225,32 @@ export default function Header() {
             >
               About
             </Link>
-            <Link
-              href="#case-studies"
-              className="block text-gray-700 hover:text-brand-secondary font-medium px-2"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Our Work
-            </Link>
+            <div>
+              <div className="font-medium text-gray-900 px-2 mb-2">Our Work</div>
+              <div className="pl-4 space-y-2">
+                <Link
+                  href="/case-studies/innovation-engineering-lucho"
+                  className="block text-gray-700 hover:text-brand-secondary"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Innovation Engineering with Lucho
+                </Link>
+                <Link
+                  href="/case-studies/ai-enablement"
+                  className="block text-gray-700 hover:text-brand-secondary"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  AI-Powered Review Automation
+                </Link>
+                <Link
+                  href="/case-studies/routing-optimization"
+                  className="block text-gray-700 hover:text-brand-secondary"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Routing Optimization
+                </Link>
+              </div>
+            </div>
             <Link
               href="/blog"
               className="block text-gray-700 hover:text-brand-secondary font-medium px-2"
