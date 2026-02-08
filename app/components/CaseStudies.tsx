@@ -55,15 +55,15 @@ export default function CaseStudies() {
 
               {/* Content */}
               <div className="p-6">
-                <div className="text-sm font-semibold text-brand-accent mb-2">
+                <div className="text-sm font-bold text-brand-primary/70 mb-2 uppercase tracking-wide">
                   {study.industry}
                 </div>
                 <h3 className="font-heading text-xl font-bold text-brand-primary mb-3 group-hover:text-brand-secondary transition-colors">
                   {study.title}
                 </h3>
-                <p className="text-gray-700">{study.description}</p>
+                <p className="text-gray-700 mb-4">{study.description}</p>
 
-                <div className="mt-4 inline-flex items-center text-brand-secondary font-semibold group-hover:text-brand-accent transition-colors">
+                <div className="inline-flex items-center text-brand-primary font-semibold group-hover:text-brand-accent transition-colors">
                   Read case study
                   <svg
                     className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"

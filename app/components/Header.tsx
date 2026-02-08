@@ -20,7 +20,11 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-8">
             {/* Services Dropdown */}
             <div className="relative group">
-              <button className="text-gray-700 hover:text-brand-secondary font-medium transition-colors flex items-center space-x-1">
+              <button
+                className="text-gray-700 hover:text-brand-secondary font-medium transition-colors flex items-center space-x-1"
+                aria-label="Services menu"
+                aria-expanded="false"
+              >
                 <span>Services</span>
                 <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -52,7 +56,11 @@ export default function Header() {
             </div>
             {/* Industries Dropdown */}
             <div className="relative group">
-              <button className="text-gray-700 hover:text-brand-secondary font-medium transition-colors flex items-center space-x-1">
+              <button
+                className="text-gray-700 hover:text-brand-secondary font-medium transition-colors flex items-center space-x-1"
+                aria-label="Industries menu"
+                aria-expanded="false"
+              >
                 <span>Industries</span>
                 <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -97,7 +105,11 @@ export default function Header() {
             </Link>
             {/* Our Work Dropdown */}
             <div className="relative group">
-              <button className="text-gray-700 hover:text-brand-secondary font-medium transition-colors flex items-center space-x-1">
+              <button
+                className="text-gray-700 hover:text-brand-secondary font-medium transition-colors flex items-center space-x-1"
+                aria-label="Our Work menu"
+                aria-expanded="false"
+              >
                 <span>Our Work</span>
                 <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -145,6 +157,8 @@ export default function Header() {
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100"
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileMenuOpen}
           >
             <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               {mobileMenuOpen ? (

@@ -83,7 +83,7 @@ export default function ThreePillars() {
                 {pillar.title}
               </h3>
 
-              <p className="text-brand-accent group-hover:text-white/90 font-medium mb-4 transition-colors">
+              <p className="text-brand-primary group-hover:text-white/90 font-semibold mb-4 transition-colors">
                 {pillar.tagline}
               </p>
 
@@ -93,9 +93,9 @@ export default function ThreePillars() {
 
               <Link
                 href={pillar.href}
-                className="inline-flex items-center text-brand-secondary group-hover:text-brand-accent font-semibold transition-colors"
+                className="inline-flex items-center text-brand-primary group-hover:text-brand-accent font-semibold transition-colors"
               >
-                Learn More
+                Explore {pillar.title}
                 <svg
                   className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
                   fill="none"

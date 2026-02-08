@@ -31,7 +31,7 @@ export default function AboutBrief() {
         <div className="text-center">
           <Link
             href="/about"
-            className="inline-flex items-center text-brand-secondary hover:text-brand-accent font-semibold text-lg transition-colors group"
+            className="inline-flex items-center text-brand-primary hover:text-brand-accent font-semibold text-lg transition-colors group"
           >
             Meet the Team
             <svg
