@@ -79,6 +79,7 @@ export default function AboutPage() {
                     width={800}
                     height={600}
                     className="w-full h-auto"
+                    priority
                   />
                 </div>
               </div>
@@ -103,6 +104,7 @@ export default function AboutPage() {
                     width={128}
                     height={128}
                     className="w-full h-full object-cover"
+                    loading="lazy"
                   />
                 </div>
                 <h3 className="font-heading text-2xl font-bold text-brand-primary text-center mb-2">
@@ -137,6 +139,7 @@ export default function AboutPage() {
                     width={128}
                     height={128}
                     className="w-full h-full object-cover"
+                    loading="lazy"
                   />
                 </div>
                 <h3 className="font-heading text-2xl font-bold text-brand-primary text-center mb-2">

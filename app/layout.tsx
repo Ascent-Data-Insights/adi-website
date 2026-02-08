@@ -6,6 +6,7 @@ const manrope = Manrope({
   subsets: ['latin'],
   variable: '--font-manrope',
   display: 'swap',
+  preload: true,
 });
 
 const kodchasan = Kodchasan({
@@ -13,6 +14,7 @@ const kodchasan = Kodchasan({
   weight: ['400', '500', '600', '700'],
   variable: '--font-kodchasan',
   display: 'swap',
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -21,6 +23,15 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.svg',
   },
+  other: {
+    'format-detection': 'telephone=no',
+  },
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 export default function RootLayout({

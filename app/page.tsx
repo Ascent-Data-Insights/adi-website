@@ -1,13 +1,16 @@
+import dynamic from 'next/dynamic';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import ThreePillars from './components/ThreePillars';
-import Industries from './components/Industries';
-import WhyWorkWithUs from './components/WhyWorkWithUs';
-import Testimonials from './components/Testimonials';
-import CaseStudies from './components/CaseStudies';
-import AboutBrief from './components/AboutBrief';
-import ContactCTA from './components/ContactCTA';
-import Footer from './components/Footer';
+
+// Lazy load below-the-fold components
+const ThreePillars = dynamic(() => import('./components/ThreePillars'));
+const Industries = dynamic(() => import('./components/Industries'));
+const WhyWorkWithUs = dynamic(() => import('./components/WhyWorkWithUs'));
+const Testimonials = dynamic(() => import('./components/Testimonials'));
+const CaseStudies = dynamic(() => import('./components/CaseStudies'));
+const AboutBrief = dynamic(() => import('./components/AboutBrief'));
+const ContactCTA = dynamic(() => import('./components/ContactCTA'));
+const Footer = dynamic(() => import('./components/Footer'));
 
 export default function Home() {
   return (

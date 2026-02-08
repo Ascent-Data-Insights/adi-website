@@ -13,7 +13,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
-            <Image src="/logo.png" alt="Ascent Data Insights" width={140} height={47} className="h-12 w-auto" />
+            <Image src="/logo.png" alt="Ascent Data Insights" width={140} height={47} className="h-12 w-auto" priority />
           </Link>
 
           {/* Desktop Navigation */}
