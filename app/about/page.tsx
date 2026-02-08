@@ -42,7 +42,7 @@ export default function AboutPage() {
               </p>
 
               <p>
-                Our founders, Parker and Aaron, spent years working at 84.51°—one of the country's
+                Our founders, Parker and Aaron, spent years working at one of the country's
                 leading analytics companies—where they saw firsthand what great data strategy, AI
                 implementation, and engineering can do at scale. They started Ascent to bring that
                 same level of rigor and quality to startups and mid-size businesses closer to home.
@@ -112,7 +112,7 @@ export default function AboutPage() {
                 </h3>
                 <p className="text-brand-accent text-center mb-6 font-semibold">Co-Founder</p>
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  Former Data Scientist and Engineer at 84.51°. Loves untangling messy problems,
+                  Data Scientist and Cloud Engineer. Loves untangling messy problems,
                   building things that work, and explaining complex ideas in plain English.
                 </p>
                 <div className="text-center">
@@ -147,8 +147,8 @@ export default function AboutPage() {
                 </h3>
                 <p className="text-brand-accent text-center mb-6 font-semibold">Co-Founder</p>
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  Former Data Scientist at 84.51°. Driven by curiosity and a belief that good data
-                  work should make people's jobs easier, not harder.
+                  Data Scientist and Software Engineer. Driven by curiosity and a belief that
+                  data and software can radically simplify and improve processes.
                 </p>
                 <div className="text-center">
                   <a
