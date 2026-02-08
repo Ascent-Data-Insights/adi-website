@@ -22,7 +22,7 @@ export default function Hero() {
                 <p className="text-xl sm:text-2xl text-white/90 max-w-4xl mx-auto mb-12 leading-relaxed">
                     Ascent Data Insights is a Cincinnati-based consultancy helping startups and mid-size
                     companies turn messy data into insight, navigate AI with clarity, and ship products
-                    that matter. You know your business best—we use technology to accelerate it.
+                    that matter. You know your business best. We use technology to accelerate it.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
