@@ -16,14 +16,6 @@ const nextConfig: NextConfig = {
 
   // Optimize production builds
   productionBrowserSourceMaps: false,
-
-  // Reduce runtime JS
-  swcMinify: true,
-
-  // Optimize CSS
-  experimental: {
-    optimizeCss: true,
-  },
 };
 
 export default nextConfig;
