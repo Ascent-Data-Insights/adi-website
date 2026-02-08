@@ -15,25 +15,26 @@ export default function ManufacturingPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-brand-primary to-brand-secondary text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl">
-            <p className="text-brand-accent font-semibold text-4xl mb-4">Manufacturing</p>
-            <h1 className="font-heading text-3xl sm:text-4xl font-bold mb-6">
-              Your shop builds what matters. <br/>Our data expertise keeps you ahead.
-            </h1>
-            <p className="text-xl text-gray-100 mb-8">
-              Your production lines, ERP systems, and sensors generate millions of data points
-              daily. Most companies treat this as operational overhead. We help you turn it into
-              your most powerful competitive advantage.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center px-6 py-3 bg-white text-brand-primary hover:bg-gray-100 rounded-lg font-semibold transition-colors"
-            >
-              Let&apos;s Talk
-            </Link>
-          </div>
+      <section className="bg-gradient-to-br from-brand-primary to-brand-secondary pt-32 pb-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="font-heading text-5xl sm:text-6xl font-bold text-white mb-6 mt-8">
+            Manufacturing
+          </h1>
+          <p className="text-2xl text-brand-accent font-semibold mb-6">
+            Your shop builds what matters. <br/>Our data expertise keeps you ahead.
+          </p>
+          <p className="text-xl text-white/90 leading-relaxed">
+            Your production lines, ERP systems, and sensors generate millions of data points
+            daily. Most companies treat this as operational overhead. We help you turn it into
+            your most powerful competitive advantage.
+          </p>
+          <br/>
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-6 py-3 bg-white text-brand-primary hover:bg-gray-100 rounded-lg font-semibold transition-colors"
+          >
+            Let&apos;s Talk
+          </Link>
         </div>
       </section>
 
