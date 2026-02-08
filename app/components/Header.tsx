@@ -10,10 +10,10 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
-            <Image src="/logo.png" alt="Ascent Data Insights" width={140} height={47} className="h-12 w-auto" priority />
+            <Image src="/logo.png" alt="Ascent Data Insights" width={180} height={60} className="h-10 lg:h-14 w-auto" priority />
           </Link>
 
           {/* Desktop Navigation */}
@@ -82,10 +82,10 @@ export default function Header() {
                   <div className="text-sm text-gray-500">Streamline supply chains</div>
                 </Link>
                 <Link
-                  href="/industries/consumer-goods"
+                  href="/industries/customer-insights"
                   className="block px-4 py-3 text-gray-700 hover:bg-brand-secondary/10 hover:text-brand-secondary transition-colors"
                 >
-                  <div className="font-semibold">Consumer Goods</div>
+                  <div className="font-semibold">Customer Insights</div>
                   <div className="text-sm text-gray-500">Understand customer behavior</div>
                 </Link>
                 <Link
@@ -217,11 +217,11 @@ export default function Header() {
                   Logistics
                 </Link>
                 <Link
-                  href="/industries/consumer-goods"
+                  href="/industries/customer-insights"
                   className="block text-gray-700 hover:text-brand-secondary"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Consumer Goods
+                  Customer Insights
                 </Link>
                 <Link
                   href="/industries/startups"

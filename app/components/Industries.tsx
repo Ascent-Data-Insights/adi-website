@@ -22,14 +22,14 @@ const industries = [
     href: '/industries/logistics',
   },
   {
-    name: 'Consumer Goods',
-    description: 'Understand customer behavior, optimize pricing, and enhance digital experiences.',
+    name: 'Customer Insights',
+    description: 'Customer segmentation, price optimization, and demand forecasting.',
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
       </svg>
     ),
-    href: '/industries/consumer-goods',
+    href: '/industries/customer-insights',
   },
   {
     name: 'Startups',
