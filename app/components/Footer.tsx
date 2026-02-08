@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Logo and tagline */}
           <div className="md:col-span-2">
-            <Image src="/logo.png" alt="Ascent Data Insights" width={180} height={60} className="h-12 w-auto mb-4 brightness-0 invert" />
+            <Image src="/logo.png" alt="Ascent Data Insights" width={180} height={60} className="h-12 w-auto mb-4 brightness-0 invert" loading="lazy" />
             <p className="text-white/80 max-w-md">
               Cincinnati-based data and AI consultancy helping businesses build what matters.
             </p>

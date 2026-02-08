@@ -3,23 +3,23 @@ import Link from 'next/link';
 const caseStudies = [
   {
     title: 'Lucho',
-    industry: 'Consumer Products',
-    description: 'Full-stack engineering for a growing brand\'s digital platform',
+    industry: 'Field Service / SaaS',
+    description: 'Rapid engineering across iOS, web, and backend for a field service platform',
     image: '/placeholder-lucho.jpg',
-    href: '/case-studies/lucho',
+    href: '/case-studies/innovation-engineering-lucho',
+  },
+  {
+    title: 'Enterprise AI Infrastructure',
+    industry: 'Fortune 500 Consumer Goods',
+    description: 'Built AI gateway infrastructure enabling thousands of users across the enterprise',
+    image: '/placeholder-ai.jpg',
+    href: '/case-studies/ai-enablement',
   },
   {
     title: 'Data Modernization Project',
     industry: 'TBD',
     description: 'Unified data from multiple sources into a single source of truth',
     image: '/placeholder-data.jpg',
-    href: '#',
-  },
-  {
-    title: 'AI Workflow Automation',
-    industry: 'TBD',
-    description: 'Built an AI-powered workflow that cut manual review time by 60%',
-    image: '/placeholder-ai.jpg',
     href: '#',
   },
 ];
@@ -55,15 +55,15 @@ export default function CaseStudies() {
 
               {/* Content */}
               <div className="p-6">
-                <div className="text-sm font-semibold text-brand-accent mb-2">
+                <div className="text-sm font-bold text-brand-primary/70 mb-2 uppercase tracking-wide">
                   {study.industry}
                 </div>
                 <h3 className="font-heading text-xl font-bold text-brand-primary mb-3 group-hover:text-brand-secondary transition-colors">
                   {study.title}
                 </h3>
-                <p className="text-gray-700">{study.description}</p>
+                <p className="text-gray-700 mb-4">{study.description}</p>
 
-                <div className="mt-4 inline-flex items-center text-brand-secondary font-semibold group-hover:text-brand-accent transition-colors">
+                <div className="inline-flex items-center text-brand-primary font-semibold group-hover:text-brand-accent transition-colors">
                   Read case study
                   <svg
                     className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"

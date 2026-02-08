@@ -10,17 +10,21 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-24">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
-            <Image src="/logo.png" alt="Ascent Data Insights" width={180} height={60} className="h-18 w-auto" />
+            <Image src="/logo.png" alt="Ascent Data Insights" width={140} height={47} className="h-12 w-auto" priority />
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {/* Services Dropdown */}
             <div className="relative group">
-              <button className="text-gray-700 hover:text-brand-secondary font-medium transition-colors flex items-center space-x-1">
+              <button
+                className="text-gray-700 hover:text-brand-secondary font-medium transition-colors flex items-center space-x-1"
+                aria-label="Services menu"
+                aria-expanded="false"
+              >
                 <span>Services</span>
                 <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -52,7 +56,11 @@ export default function Header() {
             </div>
             {/* Industries Dropdown */}
             <div className="relative group">
-              <button className="text-gray-700 hover:text-brand-secondary font-medium transition-colors flex items-center space-x-1">
+              <button
+                className="text-gray-700 hover:text-brand-secondary font-medium transition-colors flex items-center space-x-1"
+                aria-label="Industries menu"
+                aria-expanded="false"
+              >
                 <span>Industries</span>
                 <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -97,7 +105,11 @@ export default function Header() {
             </Link>
             {/* Our Work Dropdown */}
             <div className="relative group">
-              <button className="text-gray-700 hover:text-brand-secondary font-medium transition-colors flex items-center space-x-1">
+              <button
+                className="text-gray-700 hover:text-brand-secondary font-medium transition-colors flex items-center space-x-1"
+                aria-label="Our Work menu"
+                aria-expanded="false"
+              >
                 <span>Our Work</span>
                 <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -109,14 +121,14 @@ export default function Header() {
                   className="block px-4 py-3 text-gray-700 hover:bg-brand-secondary/10 hover:text-brand-secondary transition-colors"
                 >
                   <div className="font-semibold">Innovation Engineering with Lucho</div>
-                  <div className="text-sm text-gray-500">Consumer Products</div>
+                  <div className="text-sm text-gray-500">Field Service / SaaS</div>
                 </Link>
                 <Link
                   href="/case-studies/ai-enablement"
                   className="block px-4 py-3 text-gray-700 hover:bg-brand-secondary/10 hover:text-brand-secondary transition-colors"
                 >
-                  <div className="font-semibold">AI-Powered Review Automation</div>
-                  <div className="text-sm text-gray-500">Professional Services</div>
+                  <div className="font-semibold">Enterprise AI Infrastructure</div>
+                  <div className="text-sm text-gray-500">Fortune 500 Consumer Goods</div>
                 </Link>
                 <Link
                   href="/case-studies/routing-optimization"
@@ -145,6 +157,8 @@ export default function Header() {
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100"
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileMenuOpen}
           >
             <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               {mobileMenuOpen ? (
@@ -240,7 +254,7 @@ export default function Header() {
                   className="block text-gray-700 hover:text-brand-secondary"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  AI-Powered Review Automation
+                  Enterprise AI Infrastructure
                 </Link>
                 <Link
                   href="/case-studies/routing-optimization"

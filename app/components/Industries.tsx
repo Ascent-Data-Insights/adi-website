@@ -74,8 +74,8 @@ export default function Industries() {
               <p className="text-gray-600 mb-4">
                 {industry.description}
               </p>
-              <div className="text-brand-secondary font-medium flex items-center group-hover:text-brand-accent transition-colors">
-                Learn more
+              <div className="text-brand-primary font-semibold flex items-center group-hover:text-brand-accent transition-colors">
+                Explore {industry.name}
                 <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>

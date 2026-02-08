@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';
 import type { Metadata } from 'next';
@@ -60,21 +61,51 @@ export default function AboutPage() {
         {/* Meet the Team */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
+            <div className="text-center mb-12">
               <h2 className="font-heading text-4xl font-bold text-brand-primary mb-4">
                 The Team
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
                 Ascent was founded by two data scientists who believe great work comes from
                 curiosity, honesty, and craft.
               </p>
+
+              {/* Team Photo */}
+              <div className="flex justify-center mb-8">
+                <div className="relative w-full max-w-2xl rounded-xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/both.jpg"
+                    alt="Parker and Aaron, Co-Founders of Ascent Data Insights"
+                    width={800}
+                    height={600}
+                    className="w-full h-auto"
+                    priority
+                  />
+                </div>
+              </div>
+
+              {/* Experience Text */}
+              <div className="max-w-3xl mx-auto mb-16">
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Together, we have over a decade of experience in creating solutions that meet our
+                  clients where they are. We've worked with two-person startups and Fortune 20
+                  companies alike, and we'd be thrilled to partner with your organization as well!
+                </p>
+              </div>
             </div>
 
             <div className="grid md:grid-cols-2 gap-12">
               {/* Parker */}
               <div className="bg-white rounded-xl p-8 shadow-sm">
-                <div className="w-32 h-32 rounded-full bg-gradient-to-br from-brand-secondary to-brand-primary mx-auto mb-6 flex items-center justify-center text-white text-4xl font-heading">
-                  P
+                <div className="w-32 h-32 rounded-full mx-auto mb-6 overflow-hidden">
+                  <Image
+                    src="/parker.jpg"
+                    alt="Parker, Co-Founder of Ascent Data Insights"
+                    width={128}
+                    height={128}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
                 </div>
                 <h3 className="font-heading text-2xl font-bold text-brand-primary text-center mb-2">
                   Parker
@@ -86,7 +117,9 @@ export default function AboutPage() {
                 </p>
                 <div className="text-center">
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/parkerkain/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center text-brand-secondary hover:text-brand-accent transition-colors"
                   >
                     <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
@@ -99,8 +132,15 @@ export default function AboutPage() {
 
               {/* Aaron */}
               <div className="bg-white rounded-xl p-8 shadow-sm">
-                <div className="w-32 h-32 rounded-full bg-gradient-to-br from-brand-secondary to-brand-primary mx-auto mb-6 flex items-center justify-center text-white text-4xl font-heading">
-                  A
+                <div className="w-32 h-32 rounded-full mx-auto mb-6 overflow-hidden">
+                  <Image
+                    src="/aaron.jpg"
+                    alt="Aaron, Co-Founder of Ascent Data Insights"
+                    width={128}
+                    height={128}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
                 </div>
                 <h3 className="font-heading text-2xl font-bold text-brand-primary text-center mb-2">
                   Aaron
@@ -112,7 +152,9 @@ export default function AboutPage() {
                 </p>
                 <div className="text-center">
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/aaron-robeson/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center text-brand-secondary hover:text-brand-accent transition-colors"
                   >
                     <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
@@ -151,10 +193,10 @@ export default function AboutPage() {
                   </svg>
                 </div>
                 <h3 className="font-heading text-xl font-bold text-brand-primary mb-3">
-                  Listen first
+                  Understand your business
                 </h3>
                 <p className="text-gray-700">
-                  We start by understanding your problem—not pitching a pre-packaged solution.
+                  Every business is different, and we'll start by interviewing key stakeholders to understand your existing processes, differentiators, and pain points.
                 </p>
               </div>
 
@@ -175,11 +217,10 @@ export default function AboutPage() {
                   </svg>
                 </div>
                 <h3 className="font-heading text-xl font-bold text-brand-primary mb-3">
-                  Build to last
+                  Fine-tune our approach
                 </h3>
                 <p className="text-gray-700">
-                  We create intuitive tools and transfer knowledge so you're not dependent on us
-                  forever.
+                  Customize our solution to your exact needs, whether that's optimizing to keep costs low or helping you to plan for future growth.
                 </p>
               </div>
 
@@ -200,11 +241,10 @@ export default function AboutPage() {
                   </svg>
                 </div>
                 <h3 className="font-heading text-xl font-bold text-brand-primary mb-3">
-                  Stay honest
+                  Create Solutions that last
                 </h3>
                 <p className="text-gray-700">
-                  If something won't work, we'll tell you. If we're not the right fit, we'll say
-                  so.
+                  We make your team a part of the process, ensuring you continue seeing returns long after the project is complete.
                 </p>
               </div>
             </div>
