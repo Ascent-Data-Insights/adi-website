@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const workTypes = [
   {
@@ -113,7 +113,31 @@ const workTypes = [
 
 export default function TypesOfWorkCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const cardsPerView = 3;
+  const [cardsPerView, setCardsPerView] = useState(3);
+
+  // Update cards per view based on window size
+  useEffect(() => {
+    const updateCardsPerView = () => {
+      if (window.innerWidth < 768) {
+        setCardsPerView(1); // Mobile: 1 card
+      } else if (window.innerWidth < 1024) {
+        setCardsPerView(2); // Tablet: 2 cards
+      } else {
+        setCardsPerView(3); // Desktop: 3 cards
+      }
+      setCurrentIndex(0); // Reset to first slide on resize
+    };
+
+    // Set initial value
+    updateCardsPerView();
+
+    // Add resize listener
+    window.addEventListener('resize', updateCardsPerView);
+
+    // Cleanup
+    return () => window.removeEventListener('resize', updateCardsPerView);
+  }, []);
+
   const maxIndex = workTypes.length - cardsPerView;
 
   const nextSlide = () => {
@@ -156,13 +180,13 @@ export default function TypesOfWorkCarousel() {
             <div
               className="flex transition-transform duration-500 ease-out"
               style={{
-                transform: `translateX(-${currentIndex * (100 / 3)}%)`,
+                transform: `translateX(-${currentIndex * (100 / cardsPerView)}%)`,
               }}
             >
               {extendedCards.map((card, index) => (
                 <div
                   key={index}
-                  className="w-full md:w-1/3 flex-shrink-0 px-2 sm:px-3"
+                  className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-2 sm:px-3"
                 >
                   <div className="group bg-white hover:bg-brand-primary rounded-xl shadow-lg p-4 sm:p-6 flex flex-col items-center text-center hover:shadow-xl transition-all duration-300 min-h-[280px]">
                     <div className="text-brand-secondary group-hover:text-brand-accent transition-colors mb-4">{card.icon}</div>

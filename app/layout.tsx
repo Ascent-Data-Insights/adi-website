@@ -18,6 +18,9 @@ const kodchasan = Kodchasan({
 export const metadata: Metadata = {
   title: 'Ascent Data Insights - Cincinnati Data & AI Consultancy',
   description: 'We help startups and mid-size companies turn messy data into insight, navigate AI with clarity, and ship products that matter.',
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({
