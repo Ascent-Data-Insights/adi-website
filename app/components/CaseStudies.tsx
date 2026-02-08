@@ -3,23 +3,23 @@ import Link from 'next/link';
 const caseStudies = [
   {
     title: 'Lucho',
-    industry: 'Consumer Products',
-    description: 'Full-stack engineering for a growing brand\'s digital platform',
+    industry: 'Field Service / SaaS',
+    description: 'Rapid engineering across iOS, web, and backend for a field service platform',
     image: '/placeholder-lucho.jpg',
-    href: '/case-studies/lucho',
+    href: '/case-studies/innovation-engineering-lucho',
+  },
+  {
+    title: 'Enterprise AI Infrastructure',
+    industry: 'Fortune 500 Consumer Goods',
+    description: 'Built AI gateway infrastructure enabling thousands of users across the enterprise',
+    image: '/placeholder-ai.jpg',
+    href: '/case-studies/ai-enablement',
   },
   {
     title: 'Data Modernization Project',
     industry: 'TBD',
     description: 'Unified data from multiple sources into a single source of truth',
     image: '/placeholder-data.jpg',
-    href: '#',
-  },
-  {
-    title: 'AI Workflow Automation',
-    industry: 'TBD',
-    description: 'Built an AI-powered workflow that cut manual review time by 60%',
-    image: '/placeholder-ai.jpg',
     href: '#',
   },
 ];

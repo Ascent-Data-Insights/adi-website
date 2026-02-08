@@ -86,32 +86,33 @@ export default function AIStrategyPage() {
 
                 <div className="flex-grow">
                   <h3 className="font-heading text-2xl font-bold text-brand-primary mb-2">
-                    AI-Powered Review Automation
+                    Enterprise AI Infrastructure at Scale
                   </h3>
-                  <p className="text-gray-600 mb-6 italic">Professional Services</p>
+                  <p className="text-gray-600 mb-6 italic">Fortune 500 Consumer Goods</p>
 
                   <div className="space-y-4 mb-6">
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-2">The Problem:</h4>
                       <p className="text-gray-700">
-                        A manual review process was consuming hours of staff time every week,
-                        creating bottlenecks and slowing down operations.
+                        Ungoverned AI usage across the organization—teams managing their own API keys,
+                        zero cost visibility, and long onboarding times preventing rapid AI adoption.
                       </p>
                     </div>
 
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-2">What We Did:</h4>
                       <p className="text-gray-700">
-                        Developed an AI-powered workflow to automate the review process and
-                        intelligently flag exceptions for human review.
+                        Built a unified AI gateway routing to multiple providers (OpenAI, Claude,
+                        internal models) using LiteLLM and Kubernetes, providing governance and
+                        cost control at enterprise scale.
                       </p>
                     </div>
 
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-2">The Result:</h4>
                       <p className="text-gray-700">
-                        Manual review time reduced by 60%, freeing the team to focus on
-                        higher-value work and faster turnaround times.
+                        Thousands of users enabled with immediate access to AI, full cost visibility,
+                        and a platform that continues to power enterprise-wide AI workloads today.
                       </p>
                     </div>
                   </div>

@@ -109,14 +109,14 @@ export default function Header() {
                   className="block px-4 py-3 text-gray-700 hover:bg-brand-secondary/10 hover:text-brand-secondary transition-colors"
                 >
                   <div className="font-semibold">Innovation Engineering with Lucho</div>
-                  <div className="text-sm text-gray-500">Consumer Products</div>
+                  <div className="text-sm text-gray-500">Field Service / SaaS</div>
                 </Link>
                 <Link
                   href="/case-studies/ai-enablement"
                   className="block px-4 py-3 text-gray-700 hover:bg-brand-secondary/10 hover:text-brand-secondary transition-colors"
                 >
-                  <div className="font-semibold">AI-Powered Review Automation</div>
-                  <div className="text-sm text-gray-500">Professional Services</div>
+                  <div className="font-semibold">Enterprise AI Infrastructure</div>
+                  <div className="text-sm text-gray-500">Fortune 500 Consumer Goods</div>
                 </Link>
                 <Link
                   href="/case-studies/routing-optimization"
@@ -240,7 +240,7 @@ export default function Header() {
                   className="block text-gray-700 hover:text-brand-secondary"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  AI-Powered Review Automation
+                  Enterprise AI Infrastructure
                 </Link>
                 <Link
                   href="/case-studies/routing-optimization"
