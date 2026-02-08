@@ -70,7 +70,7 @@ export default function ManufacturingPage() {
                 Unplanned Downtime
               </h3>
               <p className="text-gray-600">
-                When equipment fails unexpectedly, you&apos;re not just paying for repairs—you&apos;re
+                When equipment fails unexpectedly, you&apos;re not just paying for repairs, you&apos;re
                 paying for missed production, overtime, and expedited parts. The warning signs are
                 often already in your sensor data.
               </p>
@@ -96,7 +96,7 @@ export default function ManufacturingPage() {
               </h3>
               <p className="text-gray-600">
                 You know throughput could be better, but pinpointing why is another story. Root
-                causes hide across shifts, machines, and product mixes—visible only when you connect
+                causes hide across shifts, machines, and product mixes. They become visible only when you connect
                 the dots across your systems.
               </p>
             </div>
@@ -224,7 +224,7 @@ export default function ManufacturingPage() {
               </h3>
               <p className="text-gray-600 mb-4">
                 Visibility is key, with connected data and predictive insights, we help you squeeze more value from
-                your existing capacity—optimizing sequencing, reducing changeover time, and
+                your existing capacity by optimizing sequencing, reducing changeover time, and
                 identifying hidden inefficiencies.
               </p>
               <ul className="text-gray-600 space-y-2">
@@ -254,7 +254,7 @@ export default function ManufacturingPage() {
               Our Take on AI in Manufacturing
             </h2>
             <p className="text-xl text-gray-600">
-              We&apos;ve worked with AI for years. We know what it&apos;s good at—and where it falls
+              We&apos;ve worked with AI for years. We know what it&apos;s good at <i>and</i> where it falls
               short.
             </p>
           </div>
@@ -266,7 +266,7 @@ export default function ManufacturingPage() {
               missed deadlines, or worse.
             </p>
             <p className="text-gray-700 text-lg mb-6">
-              AI is great at getting you 95% of the way there—but that last 5% of polish and
+              AI is great at getting you 95% of the way there... but that last 5% of polish and
               predictability? That&apos;s where a lot of promising projects fail. We call it the{' '}
               <span className="text-brand-accent font-semibold">final 5% trap</span>: a demo that
               detects defects 95% of the time is exciting, but on the production line, that 5% error
@@ -275,7 +275,7 @@ export default function ManufacturingPage() {
             <p className="text-gray-700 text-lg mb-6">
               That&apos;s why we&apos;re selective about where we deploy AI. We keep humans in the loop where precision is
               non-negotiable, and use AI to support and suplement. Think of AI as a tireless assistant that watches, suggests, and
-              flags—while your people make the final calls.
+              flags. While your people make the final calls.
             </p>
 
             <div className="mt-8 pt-6 border-t border-gray-200">
@@ -357,7 +357,7 @@ export default function ManufacturingPage() {
                 href="/blog/ai-in-manufacturing"
                 className="inline-flex items-center text-brand-secondary hover:text-brand-accent font-semibold transition-colors group"
               >
-                Read more: AI in Manufacturing—What&apos;s Working, What&apos;s Not
+                Read more: AI in Manufacturing: What&apos;s Working, What&apos;s Not
                 <svg
                   className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
                   fill="none"
@@ -430,7 +430,7 @@ export default function ManufacturingPage() {
                 </h3>
                 <p className="text-gray-600">
                   We&apos;ll walk your production lines, talk to operators and supervisors, and see
-                  how things actually run—not just how the org chart says they should. The best
+                  how things actually run, not just how the org chart says they should. The best
                   insights come from the people closest to the work.
                 </p>
               </div>
@@ -445,8 +445,8 @@ export default function ManufacturingPage() {
                   We focus on problems that move the needle
                 </h3>
                 <p className="text-gray-600">
-                  Not every data project is worth doing. We help you prioritize the opportunities
-                  that will have the biggest impact on throughput, quality, or cost—and we&apos;re
+                  Not every data project is worth the investment. We help you prioritize the opportunities
+                  that will have the biggest impact on throughput, quality, or cost, and we&apos;re
                   honest when something isn&apos;t worth pursuing.
                 </p>
               </div>
@@ -463,7 +463,7 @@ export default function ManufacturingPage() {
                 <p className="text-gray-600">
                   We don&apos;t just drop a dashboard and disappear. We make sure your team
                   understands what we&apos;ve built, how to use it, and how to maintain it. When
-                  we&apos;re done, you&apos;re not dependent on us—you&apos;re empowered.
+                  we&apos;re done, you&apos;re not dependent on us. You&apos;re empowered.
                 </p>
               </div>
             </div>
