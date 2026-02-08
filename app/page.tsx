@@ -6,7 +6,7 @@ import Hero from './components/Hero';
 const ThreePillars = dynamic(() => import('./components/ThreePillars'));
 const Industries = dynamic(() => import('./components/Industries'));
 const WhyWorkWithUs = dynamic(() => import('./components/WhyWorkWithUs'));
-const Testimonials = dynamic(() => import('./components/Testimonials'));
+const Testimonials = dynamic(() => import('./components/Testimonials')); // Ready to show when testimonials are ready
 const CaseStudies = dynamic(() => import('./components/CaseStudies'));
 const AboutBrief = dynamic(() => import('./components/AboutBrief'));
 const ContactCTA = dynamic(() => import('./components/ContactCTA'));
@@ -20,7 +20,7 @@ export default function Home() {
       <ThreePillars />
       <Industries />
       <WhyWorkWithUs />
-      <Testimonials />
+      {/* <Testimonials /> */} {/* Hidden until testimonials are ready */}
       <CaseStudies />
       <AboutBrief />
       <ContactCTA />
