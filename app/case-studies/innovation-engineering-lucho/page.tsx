@@ -82,7 +82,7 @@ export default function LuchoCaseStudyPage() {
                                 Lucho
                             </a>
                             , a Cincinnati-based startup building a crew management platform for landscaping companies,
-                            had technical founders working on their app—but they needed to move faster. With a complex
+                            had technical founders working on their app, but still needed to move faster. With a complex
                             product spanning iOS, web, and sophisticated backend infrastructure, they needed a partner
                             who could accelerate development across the entire stack without slowing down to get up to speed.
                         </p>
@@ -124,10 +124,10 @@ export default function LuchoCaseStudyPage() {
                         </h2>
                         <div className="prose prose-lg max-w-none">
                             <p className="text-gray-700 mb-6">
-                                Over three months, we worked across every layer of Lucho's tech stack—jumping between
+                                Over three months, we worked across every layer of Lucho's tech stack. We jumped between
                                 iOS development, React web frontends, backend API work, database design, and search
-                                infrastructure. The value we brought wasn't just writing code—it was the ability to
-                                learn rapidly across domains and ship features without needing months of onboarding.
+                                infrastructure. The value we brought wasn't just writing code, it was the ability to
+                                rapidly ship features across domains without needing months of onboarding.
                             </p>
 
                             <div className="space-y-8">
@@ -139,7 +139,7 @@ export default function LuchoCaseStudyPage() {
                                         The most impactful work was building search infrastructure using Elasticsearch—and
                                         making it work seamlessly across the backend, React web app, and iOS app. For a
                                         platform where crews need to quickly find jobs, messages, photos, and location
-                                        data, search isn't a nice-to-have—it's core to the product.
+                                        data, search is absolutely core to the product.
                                     </p>
                                     <p className="text-gray-700">
                                         In addiiton to being core to search in the short-term, our Elasticsearch implementation
@@ -202,7 +202,7 @@ export default function LuchoCaseStudyPage() {
                         <div className="prose prose-lg max-w-none mb-12">
                             <p className="text-gray-700 mb-6">
                                 In just three months, we delivered features and infrastructure across every layer of
-                                Lucho's platform—accelerating their progress toward launch significantly.
+                                Lucho's platform, helping to accelerate their progress toward launch significantly.
                             </p>
 
                             <ul className="space-y-4 text-gray-700">
@@ -240,7 +240,7 @@ export default function LuchoCaseStudyPage() {
                                         />
                                     </svg>
                                     <span>
-                                        Delivered features across iOS, web frontend, backend APIs, and database—demonstrating
+                                        Delivered features across iOS, web frontend, backend APIs, and their database. This demonstrated
                                         the value of a team with broad technical range
                                     </span>
                                 </li>
@@ -317,7 +317,7 @@ export default function LuchoCaseStudyPage() {
                         </h2>
                         <p className="text-xl text-gray-700 mb-8">
                             Whether you're building an MVP, accelerating toward launch, or need to ship features
-                            faster—let's talk about how we can help.
+                            faster, let's talk about how we can help.
                         </p>
                         <Link
                             href="/contact"
