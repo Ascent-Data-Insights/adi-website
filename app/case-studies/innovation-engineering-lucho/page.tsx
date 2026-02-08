@@ -1,11 +1,12 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Innovation Engineering with Lucho | Case Study | Ascent Data Insights',
-  description: 'How we built a scalable digital platform for a growing consumer brand.',
+  description: 'How we accelerated development across iOS, web, and backend for a field service platform.',
 };
 
 export default function LuchoCaseStudyPage() {
@@ -23,17 +24,45 @@ export default function LuchoCaseStudyPage() {
               </span>
             </div>
 
+            {/* Lucho Logo */}
+            <div className="mb-8">
+              <Image
+                src="/images/lucho.svg"
+                alt="Lucho"
+                width={200}
+                height={60}
+                className="h-12 w-auto"
+              />
+            </div>
+
             <h1 className="font-heading text-4xl sm:text-5xl font-bold text-white mb-6">
-              Innovation Engineering with Lucho
+              Rapid Engineering Across the Stack for Lucho
             </h1>
 
             <p className="text-xl text-white/90 mb-4">
-              Building a scalable digital platform for a growing consumer brand
+              Accelerating development across iOS, web, and backend infrastructure for a field service platform
             </p>
 
-            <p className="text-lg text-white/80">
-              <strong>Industry:</strong> Consumer Products
-            </p>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4 text-lg text-white/80">
+              <div>
+                <strong>Industry:</strong> Field Service / SaaS
+              </div>
+              <div className="hidden sm:block text-white/40">•</div>
+              <div>
+                <strong>Timeline:</strong> 2-month engagement
+              </div>
+              <div className="hidden sm:block text-white/40">•</div>
+              <div>
+                <a
+                  href="https://getlucho.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-brand-accent hover:text-white transition-colors underline"
+                >
+                  Visit Lucho →
+                </a>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -44,10 +73,18 @@ export default function LuchoCaseStudyPage() {
               The Challenge
             </h2>
             <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-              Lucho, a rapidly growing consumer brand, needed a custom digital platform to support
-              their expansion. Without in-house engineering capacity, they were looking for a
-              partner who could not only build the platform but also ensure their team could
-              maintain and evolve it over time.
+              <a
+                href="https://getlucho.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-brand-secondary hover:text-brand-primary transition-colors underline font-semibold"
+              >
+                Lucho
+              </a>
+              , a Cincinnati-based startup building a crew management platform for landscaping companies,
+              had technical founders working on their app—but they needed to move faster. With a complex
+              product spanning iOS, web, and sophisticated backend infrastructure, they needed a partner
+              who could accelerate development across the entire stack without slowing down to get up to speed.
             </p>
 
             <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -56,7 +93,7 @@ export default function LuchoCaseStudyPage() {
                   The Problem
                 </h3>
                 <p className="text-gray-700">
-                  No in-house engineering team to build and maintain a custom digital platform
+                  Building across iOS, web, backend APIs, and search infrastructure simultaneously—a broad technical scope requiring rapid context switching
                 </p>
               </div>
               <div className="bg-gray-50 p-6 rounded-xl">
@@ -64,7 +101,7 @@ export default function LuchoCaseStudyPage() {
                   The Goal
                 </h3>
                 <p className="text-gray-700">
-                  Create a scalable platform that supports rapid business growth
+                  Accelerate toward launch by shipping features faster across the entire platform
                 </p>
               </div>
               <div className="bg-gray-50 p-6 rounded-xl">
@@ -72,7 +109,7 @@ export default function LuchoCaseStudyPage() {
                   The Timeline
                 </h3>
                 <p className="text-gray-700">
-                  Delivered on schedule with ongoing support and knowledge transfer
+                  2-month engagement delivering capabilities across multiple platforms
                 </p>
               </div>
             </div>
@@ -83,45 +120,54 @@ export default function LuchoCaseStudyPage() {
         <section className="py-16 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="font-heading text-3xl font-bold text-brand-primary mb-6">
-              Our Approach
+              What We Did
             </h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 mb-6">
-                We took a comprehensive approach to building Lucho's digital platform, focusing on
-                three key areas:
+                Over two months, we worked across every layer of Lucho's tech stack—jumping between
+                iOS development, React web frontends, backend API work, database design, and search
+                infrastructure. The value we brought wasn't just writing code—it was the ability to
+                learn rapidly across domains and ship features without needing months of onboarding.
               </p>
 
               <div className="space-y-8">
                 <div>
                   <h3 className="font-heading text-xl font-bold text-brand-primary mb-3">
-                    1. Full-Stack Development
+                    1. Elasticsearch Implementation Across the Stack
                   </h3>
+                  <p className="text-gray-700 mb-3">
+                    The most impactful work was building search infrastructure using Elasticsearch—and
+                    making it work seamlessly across the backend, React web app, and iOS app. For a
+                    platform where crews need to quickly find jobs, messages, photos, and location
+                    data, search isn't a nice-to-have—it's core to the product.
+                  </p>
                   <p className="text-gray-700">
-                    Built a complete web presence and backend systems from the ground up, using
-                    modern technologies that would scale with the business. We designed the
-                    architecture to be maintainable and extensible.
+                    We didn't just implement Elasticsearch—we built the foundation for future AI
+                    capabilities, setting Lucho up to add intelligent recommendations and automation
+                    down the line.
                   </p>
                 </div>
 
                 <div>
                   <h3 className="font-heading text-xl font-bold text-brand-primary mb-3">
-                    2. Knowledge Transfer
+                    2. iOS, Web, and Backend Development
                   </h3>
                   <p className="text-gray-700">
-                    As we built, we documented everything and conducted regular knowledge-sharing
-                    sessions with Lucho's team. Our goal was to ensure they could confidently
-                    manage and evolve the platform after our engagement.
+                    We contributed across every part of the platform: native iOS features, React
+                    frontend work, backend API endpoints, and database architecture. The team could
+                    focus on product design and strategy while we brought their vision to life in code.
                   </p>
                 </div>
 
                 <div>
                   <h3 className="font-heading text-xl font-bold text-brand-primary mb-3">
-                    3. Scalable Architecture
+                    3. Agile, Rapid Iteration
                   </h3>
                   <p className="text-gray-700">
-                    We built the platform with growth in mind—choosing technologies and patterns
-                    that could handle increasing traffic and feature complexity without requiring a
-                    complete rebuild.
+                    Because we're comfortable context-switching between technologies and frameworks,
+                    we could move fast without getting blocked. Whether it was Swift for iOS,
+                    TypeScript for the web, or optimizing Elasticsearch queries, we picked up what
+                    we needed and kept shipping.
                   </p>
                 </div>
               </div>
@@ -139,24 +185,24 @@ export default function LuchoCaseStudyPage() {
             <div className="bg-gradient-to-br from-brand-primary to-brand-secondary rounded-2xl p-8 md:p-12 text-white mb-8">
               <div className="grid md:grid-cols-3 gap-8 text-center">
                 <div>
-                  <div className="text-4xl font-bold text-brand-accent mb-2">100%</div>
-                  <div className="text-white/90">On-time delivery</div>
+                  <div className="text-4xl font-bold text-brand-accent mb-2">2 Months</div>
+                  <div className="text-white/90">Rapid delivery cycle</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold text-brand-accent mb-2">Scalable</div>
-                  <div className="text-white/90">Platform architecture</div>
+                  <div className="text-4xl font-bold text-brand-accent mb-2">5 Platforms</div>
+                  <div className="text-white/90">iOS, Web, API, DB, Search</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold text-brand-accent mb-2">Ready</div>
-                  <div className="text-white/90">For continued growth</div>
+                  <div className="text-4xl font-bold text-brand-accent mb-2">1 Team</div>
+                  <div className="text-white/90">Breadth without specialists</div>
                 </div>
               </div>
             </div>
 
-            <div className="prose prose-lg max-w-none">
+            <div className="prose prose-lg max-w-none mb-12">
               <p className="text-gray-700 mb-6">
-                The platform we built for Lucho is now supporting their continued growth as a
-                brand. Key outcomes include:
+                In just two months, we delivered features and infrastructure across every layer of
+                Lucho's platform—accelerating their progress toward launch significantly.
               </p>
 
               <ul className="space-y-4 text-gray-700">
@@ -175,7 +221,8 @@ export default function LuchoCaseStudyPage() {
                     />
                   </svg>
                   <span>
-                    A robust, scalable platform delivered on time and within budget
+                    Built Elasticsearch infrastructure from scratch and integrated it across backend,
+                    React web app, and native iOS app
                   </span>
                 </li>
                 <li className="flex items-start">
@@ -193,7 +240,8 @@ export default function LuchoCaseStudyPage() {
                     />
                   </svg>
                   <span>
-                    Comprehensive documentation and knowledge transfer enabling team independence
+                    Delivered features across iOS, web frontend, backend APIs, and database—demonstrating
+                    the value of a team with broad technical range
                   </span>
                 </li>
                 <li className="flex items-start">
@@ -211,10 +259,52 @@ export default function LuchoCaseStudyPage() {
                     />
                   </svg>
                   <span>
-                    Architecture designed for long-term growth and feature expansion
+                    Laid groundwork for future AI capabilities by architecting search infrastructure
+                    with extensibility in mind
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <svg
+                    className="w-6 h-6 text-brand-accent mr-3 flex-shrink-0 mt-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span>
+                    Enabled the Lucho team to focus on product design and strategy while we handled
+                    technical execution
                   </span>
                 </li>
               </ul>
+            </div>
+
+            {/* Testimonial */}
+            <div className="bg-gray-50 rounded-2xl p-8 md:p-10 border-l-4 border-brand-accent">
+              <div className="flex items-start mb-4">
+                <svg
+                  className="w-10 h-10 text-brand-accent opacity-50 mr-4 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z" />
+                </svg>
+                <div>
+                  <p className="text-lg text-gray-700 italic leading-relaxed mb-4">
+                    [Testimonial placeholder - to be filled with quote from Lucho founder]
+                  </p>
+                  <div className="text-sm text-gray-600">
+                    <div className="font-semibold text-brand-primary">[Name], [Title]</div>
+                    <div>Lucho</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -223,10 +313,11 @@ export default function LuchoCaseStudyPage() {
         <section className="py-16 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="font-heading text-3xl font-bold text-brand-primary mb-4">
-              Have a product idea that needs building?
+              Need a team that can work across your entire stack?
             </h2>
             <p className="text-xl text-gray-700 mb-8">
-              Let's talk about how we can bring your vision to life.
+              Whether you're building an MVP, accelerating toward launch, or need to ship features
+              faster—let's talk about how we can help.
             </p>
             <Link
               href="/contact"
