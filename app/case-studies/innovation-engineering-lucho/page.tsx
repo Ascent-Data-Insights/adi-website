@@ -297,10 +297,10 @@ export default function LuchoCaseStudyPage() {
                                 </svg>
                                 <div>
                                     <p className="text-lg text-gray-700 italic leading-relaxed mb-4">
-                                        [Testimonial placeholder - to be filled with quote from Lucho founder]
+                                        "Ascent took ownership of critical infrastructure work, including standing up and shaping our Elasticsearch foundation. That freed our team to stay focused on core product and design decisions. They operated independently, moved quickly, and gave us confidence that the technical base was being built the right way."
                                     </p>
                                     <div className="text-sm text-gray-600">
-                                        <div className="font-semibold text-brand-primary">[Name], [Title]</div>
+                                        <div className="font-semibold text-brand-primary">Tim Reddick, Co-Founder</div>
                                         <div>Lucho</div>
                                     </div>
                                 </div>

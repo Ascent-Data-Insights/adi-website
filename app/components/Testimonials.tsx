@@ -1,24 +1,17 @@
 const testimonials = [
   {
     quote:
-      "Ascent didn't just build what we asked for—they helped us figure out what we actually needed. And they made sure our team understood it.",
-    author: '[Name]',
-    title: '[Title]',
+      "Ascent took ownership of critical infrastructure work, including standing up and shaping our Elasticsearch foundation. That freed our team to stay focused on core product and design decisions. They operated independently, moved quickly, and gave us confidence that the technical base was being built the right way.",
+    author: 'Tim Reddick',
+    title: 'Co-Founder',
     company: 'Lucho',
   },
   {
     quote:
-      'They cut through the AI noise and helped us focus on what would actually move the needle.',
-    author: '[Name]',
-    title: '[Title]',
-    company: '[Company]',
-  },
-  {
-    quote:
-      'Working with Parker and Aaron felt like having experts on our team, not outside vendors.',
-    author: '[Name]',
-    title: '[Title]',
-    company: '[Company]',
+      "I've worked with Parker and Aaron deploying mission-critical AI across a $140B retailer. They're uniquely qualified to build and scale high-volume AI solutions that deliver material enterprise value.",
+    author: 'Todd James',
+    title: 'Founder',
+    company: 'Aurora Insights LLC',
   },
 ];
 
@@ -34,7 +27,7 @@ export default function Testimonials() {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}

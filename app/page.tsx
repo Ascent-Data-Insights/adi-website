@@ -20,7 +20,7 @@ export default function Home() {
       <ThreePillars />
       <Industries />
       <WhyWorkWithUs />
-      {/* <Testimonials /> */} {/* Hidden until testimonials are ready */}
+      <Testimonials />
       <CaseStudies />
       <AboutBrief />
       <ContactCTA />

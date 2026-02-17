@@ -1,26 +1,28 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import { Bot, Truck } from 'lucide-react';
 
 const caseStudies = [
   {
     title: 'Lucho',
     industry: 'Field Service / SaaS',
     description: 'Rapid engineering across iOS, web, and backend for a field service platform',
-    image: '/placeholder-lucho.jpg',
     href: '/case-studies/innovation-engineering-lucho',
+    visual: 'lucho-logo',
   },
   {
     title: 'Enterprise AI Infrastructure',
     industry: 'Fortune 500 Consumer Goods',
     description: 'Built AI gateway infrastructure enabling thousands of users across the enterprise',
-    image: '/placeholder-ai.jpg',
     href: '/case-studies/ai-enablement',
+    visual: 'robot',
   },
   {
-    title: 'Data Modernization Project',
-    industry: 'TBD',
-    description: 'Unified data from multiple sources into a single source of truth',
-    image: '/placeholder-data.jpg',
-    href: '#',
+    title: 'Routing Optimization',
+    industry: 'Fortune 500 Logistics',
+    description: 'Drove millions in cost savings by improving data quality and optimizing routing across thousands of locations',
+    href: '/case-studies/routing-optimization',
+    visual: 'truck',
   },
 ];
 
@@ -46,11 +48,23 @@ export default function CaseStudies() {
               href={study.href}
               className="group block rounded-xl overflow-hidden bg-gray-50 hover:shadow-xl transition-all duration-300"
             >
-              {/* Image placeholder */}
-              <div className="aspect-video bg-gradient-to-br from-brand-secondary to-brand-primary relative overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center text-white/50 text-sm">
-                  Image Placeholder
-                </div>
+              {/* Card visual */}
+              <div className="aspect-video relative overflow-hidden flex items-center justify-center bg-gradient-to-br from-brand-secondary to-brand-primary">
+                {study.visual === 'lucho-logo' && (
+                  <Image
+                    src="/images/lucho.svg"
+                    alt="Lucho"
+                    width={400}
+                    height={120}
+                    className="w-[60%] h-auto"
+                  />
+                )}
+                {study.visual === 'robot' && (
+                  <Bot className="w-36 h-36 text-white/80" strokeWidth={1} />
+                )}
+                {study.visual === 'truck' && (
+                  <Truck className="w-36 h-36 text-white/80" strokeWidth={1} />
+                )}
               </div>
 
               {/* Content */}
