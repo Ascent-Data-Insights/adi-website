@@ -140,6 +140,12 @@ export default function Header() {
               </div>
             </div>
             <Link
+              href="/demos"
+              className="text-gray-700 hover:text-brand-secondary font-medium transition-colors"
+            >
+              Demos
+            </Link>
+            <Link
               href="/blog"
               className="text-gray-700 hover:text-brand-secondary font-medium transition-colors"
             >
@@ -265,6 +271,13 @@ export default function Header() {
                 </Link>
               </div>
             </div>
+            <Link
+              href="/demos"
+              className="block text-gray-700 hover:text-brand-secondary font-medium px-2"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Demos
+            </Link>
             <Link
               href="/blog"
               className="block text-gray-700 hover:text-brand-secondary font-medium px-2"
