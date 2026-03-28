@@ -52,7 +52,7 @@ export default function BlogPage() {
                             src={post.heroImage}
                             alt={post.title}
                             fill
-                            className="object-cover hover:scale-105 transition-transform duration-300"
+                            className="object-contain hover:scale-105 transition-transform duration-300"
                           />
                         </div>
                       </Link>
